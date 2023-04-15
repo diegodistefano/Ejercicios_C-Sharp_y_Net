@@ -60,9 +60,15 @@ namespace EjerciciosPractica1
             lbl.Cursor = Cursors.Arrow;
         }
 
-        private void txtBox_TextChanged(object sender, EventArgs e)
+        private void txtBox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if ((e.KeyChar < 48 || e.KeyChar > 59) && e.KeyChar != 8)
+                e.Handled = true;
+        }
 
+        private void txtBoxNew_Leave(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tiene un total de " + txtBoxNew.Text.Length + " caracteres.");
         }
     }
 }

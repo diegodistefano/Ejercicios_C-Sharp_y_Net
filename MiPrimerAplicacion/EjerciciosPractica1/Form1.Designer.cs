@@ -33,6 +33,7 @@ namespace EjerciciosPractica1
             this.btnBoton = new System.Windows.Forms.Button();
             this.lbl = new System.Windows.Forms.Label();
             this.txtBox = new System.Windows.Forms.TextBox();
+            this.txtBoxNew = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnBoton
@@ -74,7 +75,17 @@ namespace EjerciciosPractica1
             this.txtBox.Name = "txtBox";
             this.txtBox.Size = new System.Drawing.Size(138, 20);
             this.txtBox.TabIndex = 2;
-            this.txtBox.TextChanged += new System.EventHandler(this.txtBox_TextChanged);
+            this.txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_KeyPress);
+            // 
+            // txtBoxNew
+            // 
+            this.txtBoxNew.Location = new System.Drawing.Point(94, 388);
+            this.txtBoxNew.Multiline = true;
+            this.txtBoxNew.Name = "txtBoxNew";
+            this.txtBoxNew.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtBoxNew.Size = new System.Drawing.Size(138, 97);
+            this.txtBoxNew.TabIndex = 3;
+            this.txtBoxNew.Leave += new System.EventHandler(this.txtBoxNew_Leave);
             // 
             // Form1
             // 
@@ -82,6 +93,7 @@ namespace EjerciciosPractica1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(339, 510);
+            this.Controls.Add(this.txtBoxNew);
             this.Controls.Add(this.txtBox);
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.btnBoton);
@@ -104,6 +116,7 @@ namespace EjerciciosPractica1
 		private System.Windows.Forms.Button btnBoton;
 		private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.TextBox txtBox;
+        private System.Windows.Forms.TextBox txtBoxNew;
     }
 }
 
